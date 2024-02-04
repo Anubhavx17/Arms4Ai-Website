@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import images from "../helpers/Images";
 import PageLoader from "../components/PageLoader";
 import { EllipseCurve } from "three";
+import ReactPlayer from "react-player";
 const {
   elipse2,
   jagriti,
@@ -26,14 +27,19 @@ const {
   logo,
   group9,
   group10,
+  vid,
 } = images;
 
 export default class About extends Component {
   state = {
     imgIndex: 1,
+    playVideo: false,
   };
 
   componentDidMount() {
+    this.delayedPlayback = setTimeout(() => {
+      this.setState({ playVideo: true });
+    }, 5000);
     var mission1 = document.getElementById("mission1");
     var mission2 = document.getElementById("mission2");
     var mission3 = document.getElementById("mission3");
@@ -59,7 +65,12 @@ export default class About extends Component {
     });
   }
 
+  componentWillUnmount() {
+    // Clear the timeout to avoid memory leaks
+    clearTimeout(this.delayedPlayback);
+  }
   render() {
+    const { playVideo } = this.state;
     const teamMembers = [
       {
         name: "MR R C ",
@@ -92,7 +103,7 @@ export default class About extends Component {
       {
         name: "SIDHARRTH ",
         sur: "KUMAR",
-        role: "ML ENGINEER EXPERTISE - AUTOMATION AND MODULAR PYTHON SCRIPTING",
+        role: "ML ENGINEER",
         linkedin:
           "https://www.linkedin.com/in/sidharrth-kumar-singh-9434071b6/",
         image: shidarth,
@@ -100,14 +111,14 @@ export default class About extends Component {
       {
         name: "NITISH ",
         sur: "KUMAR",
-        role: "DATA SCIENTIST EXPERTISE - DATA MODELING, DATA ANALYSIS AND MLOPS",
+        role: "DATA SCIENTIST",
         linkedin: "",
         image: nitesh,
       },
       {
         name: "ANUBHAV ",
         sur: "SINGH",
-        role: "SOFTWARE DEVELOPMENT ENGINEER EXPERTISE - FRONTEND DEVELOPMENT",
+        role: "SOFTWARE DEVELOPMENT ENGINEER",
         linkedin: "https://www.linkedin.com/in/anubhav-singhh",
         image: anubav,
       },
@@ -124,28 +135,28 @@ export default class About extends Component {
       {
         name: "Dr P.K ",
         sur: "Joshi",
-        role: "MENTOR Professor School of Environment Science, JNU, New Delhi",
+        role: "MENTOR Professor School of Environment Science",
         image: pk,
         linkedn: "https://www.linkedin.com/in/p-k-joshi-a860869/",
       },
       {
         name: "Dr Som ",
         sur: "Mondal",
-        role: "ADVISOR Senior Team Member Reliance- New Energy Solar India",
+        role: "ADVISOR Senior Team Member Reliance-New Energy Solar India",
         image: mondal,
         linkedn: "https://www.linkedin.com/in/som-mondal-renen/",
       },
       {
         name: "Dr Sapan ",
         sur: "Thapar",
-        role: "ADVISOR HoD & Associate Professor Dept of Sustainable Energy & Engineering TERI-SAS, New Delhi",
+        role: "ADVISOR HoD & Associate Professor Dept of Sustainable Energy & Engineering",
         image: thapur,
         linkedn: "https://www.linkedin.com/in/sapan-thapar-430a5950/",
       },
       {
         name: "Prof. Shakeel ",
         sur: "Ahmed",
-        role: "ADVISOR & MENTOR Secretary Asian Global Network on Water and Development Information for Arid Lands, Ex Chief Scientist, CSIR-NGRI",
+        role: "ADVISOR & MENTOR Secretary Asian Global Network on Water and Development Information for Arid Lands",
         image: admed,
         linkedn: "https://www.linkedin.com/in/shakeel-ahmed-75971330/",
       },
@@ -216,8 +227,20 @@ export default class About extends Component {
             </h1>
             <div
               className="hidden lg:block h-[25vw] w-[45vw] absolute top-[5vw] left-[43vw]"
-              style={{ backgroundColor: "#7377BF" }}
-            ></div>
+              style={{ backgroundColor: "transparent", zIndex: "1000" }}
+            >
+              {playVideo && (
+                <ReactPlayer
+                  url={vid}
+                  width="100%"
+                  height="100%"
+                  controls={false}
+                  playing={true}
+                  volume={0.1}
+                  loop={true}
+                />
+              )}
+            </div>
             <div
               className="hidden lg:block h-[25vw] w-[45vw] px-[8vw] py-[5vw] absolute top-[20vw] left-[8vw]"
               style={{ backgroundColor: "#F6D9AB" }}
@@ -455,15 +478,15 @@ export default class About extends Component {
                   <img src={evelop} alt="" className="h-[100%] w-[100%]" />
                 </div>
                 <p
-                  className="tracking-[6px] py-[20px] lg:py-[1vw] text-[16px] lg:text-[1vw]"
+                  className="tracking-[6px] py-[20px] lg:py-[1vw] text-[18px] lg:text-[1vw]"
                   style={{ color: "#FFB831" }}
                 >
                   CAAS
                 </p>
-                <p className="text-[16px] lg:text-[1vw] rozha">
+                <p className="text-[16px] lg:text-[1.5vw] rozha">
                   Capability as a Service
                 </p>
-                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[0.8vw] lg:pb-[8vw]">
+                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[1vw] lg:pb-[8vw]">
                   Customised stand-alone desktop-based tool, for
                   <br /> enterprise industry offering an end to end
                   <br /> solution for data preparation and geospatial
@@ -480,10 +503,10 @@ export default class About extends Component {
                 >
                   DAAS
                 </p>
-                <p className="text-[16px] lg:text-[1vw] rozha">
+                <p className="text-[16px] lg:text-[1.5vw] rozha">
                   Data as a Service
                 </p>
-                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[0.8vw] lg:pb-[8vw]">
+                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[1vw] lg:pb-[8vw]">
                   Customers who require bulk data products in
                   <br /> no time and wish to procure data products
                   <br /> directly.
@@ -499,10 +522,10 @@ export default class About extends Component {
                 >
                   SAAS
                 </p>
-                <p className="text-[16px] lg:text-[1vw] rozha">
+                <p className="text-[16px] lg:text-[1.5vw] rozha">
                   Subscription as a Service
                 </p>
-                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[0.8vw] lg:pb-[8vw]">
+                <p className="text-[16px] pt-[20px] pb-[200px] lg:text-[1vw] lg:pb-[8vw]">
                   Online platform based on subscription as per
                   <br /> the user requirement that will offer number of <br />
                   AI based image processing tools.

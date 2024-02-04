@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import { goToPrevious, goToNext } from '../helpers/CarousalSlider';
-import Footer from '../components/Footer';
+import React, { useRef } from "react";
+import { goToPrevious, goToNext } from "../helpers/CarousalSlider";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import { blogs } from '../blogs/Blogs';
-import PageLoader from '../components/PageLoader';
+import { blogs } from "../blogs/Blogs";
+import PageLoader from "../components/PageLoader";
 
 export default function Resources() {
   const carouselRef = useRef(null);
@@ -16,22 +16,15 @@ export default function Resources() {
     goToNext(carouselRef);
   };
 
-
   return (
     <>
-    <PageLoader/>
-      <div className='containers'>
+      <PageLoader />
+      <div className="containers">
         <div className="blog-head-line">
           <div className="head-line-left">
-            <p className="topic">
-              {blogs[0].topic}
-            </p>
-            <h3>
-              {blogs[0].title}
-            </h3>
-            <font>
-              {blogs[0].subTitle}
-            </font>
+            <p className="topic">{blogs[0].topic}</p>
+            <h3>{blogs[0].title}</h3>
+            <font>{blogs[0].subTitle}</font>
             <Link
               to="/blogdetails"
               state={{
@@ -41,19 +34,19 @@ export default function Resources() {
                 body: blogs[0].body,
                 date: blogs[0].date,
                 thumbnail: blogs[0].thumbnail,
-                bodyImg: blogs[0].bodyImg
+                bodyImg: blogs[0].bodyImg,
               }}
             >
-              <button>Read article</button>
+              {/* <button>Read article</button> */}
             </Link>
           </div>
-          <div className='head-line-right'>
-            <img src={blogs[0].thumbnail} alt="arms4ai" />
+          <div className="head-line-right">
+            {/* <img src={blogs[0].thumbnail} alt="arms4ai" /> */}
           </div>
         </div>
       </div>
 
-      <div className='recent-post'>
+      {/* <div className='recent-post'>
         <div className='containers'>
           <h3 className='recent-heading'>Recent Posts</h3>
           <div className="carousals" ref={carouselRef}>
@@ -115,7 +108,7 @@ export default function Resources() {
               </div>
             ))}
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </>

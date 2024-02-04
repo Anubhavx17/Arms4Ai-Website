@@ -630,7 +630,7 @@ body {
 /* resources*/
 
 .topic {
-  color: var(--yellow);
+  color: var(--mainWhite);
   font-size: 20px;
   font-weight: 900;
   margin: 60px 0 30px 0;

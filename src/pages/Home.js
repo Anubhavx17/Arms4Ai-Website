@@ -336,7 +336,7 @@ export default function Home() {
           />
         </div> */}
         <div
-          style={{ marginRight: "250px" }}
+          style={{ marginRight: "200px" }}
           className="absolute top-[28vw] right-0 z-[0] w-[100%] h-[100vw] hidden lg:block"
         >
           <svg
@@ -379,12 +379,12 @@ export default function Home() {
                 </h1>
                 <h1
                   className="text-[2.1vw] font-bold mt-[2.5vw]"
-                  style={{ color: "#FFB831" }}
+                  style={{ color: "#FFB831", fontSize: "50px" }}
                   id="text-changing"
                 ></h1>
                 <div className="flex gap-[2.5vw] mt-[4vw]">
                   <div className="flex-[2]">
-                    <p className="text-[0.8vw] mt-[1vw]">
+                    <p className="text-[1vw] mt-[1.1vw]">
                       Saving cost & manpower up to
                     </p>
                     <h5 className="text-[0.9vw] stroke-title mt-[0.5vw]">
@@ -396,7 +396,7 @@ export default function Home() {
                     style={{ backgroundColor: "#949494" }}
                   ></div>
                   <div className="flex-[3]">
-                    <p className="text-[0.8vw]">
+                    <p className="text-[1vw]">
                       Delivering analysis ready data and
                       <br /> decision making in B2B and B2G
                       <br /> sector offered as 
