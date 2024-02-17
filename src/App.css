@@ -107,6 +107,12 @@ body {
   animation-fill-mode: forwards;
   offset-path: url("#ellipse-path");
 }
+.moving-circle-2 {
+  animation: followpath 35s linear infinite;
+  animation-fill-mode: forwards;
+  offset-path: url("#ellipse-path");
+  animation-delay: -17.5s;
+}
 
 .moving-blur-circle {
   animation: followpath 15s linear infinite;

@@ -42,9 +42,13 @@ export default function Contact() {
             </div>
             <p>Devika Tower, Nehru Place, New Delhi</p>
             <div className="social">
-              <FaLinkedin className="linkedin-icon" />
-              {/* <FaTwitter className="twitter-icon" /> */}
-              <FaFacebook className="facebook-icon" />
+              <a class="" href="https://www.linkedin.com/company/arms4ai/">
+                <FaLinkedin className="linkedin-icon" />
+              </a>
+
+              <a class="" href="https://twitter.com/Arms4AI1">
+                <FaTwitter className="linkedin-icon" />
+              </a>
             </div>
           </div>
           <div className="contact-right">

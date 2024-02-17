@@ -82,7 +82,7 @@ export default class Product extends Component {
                 </div>
               </div>
             </div>
-            <div className="lg:flex lg:gap-[10vw] justify-center mt-[0] lg:mt-[5vw]">
+            {/* <div className="lg:flex lg:gap-[10vw] justify-center mt-[0] lg:mt-[5vw]">
               <div className="flex gap-[20px] lg:gap-[2vw] mt-[30px] lg:mt-[0]">
                 <div>
                   <img
@@ -121,7 +121,7 @@ export default class Product extends Component {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div>
             {/* <img
@@ -135,7 +135,7 @@ export default class Product extends Component {
               className="absolute top-[400px] w-[100%] block lg:hidden"
             /> */}
 
-            <div style={{ marginTop: "-340px" }}>
+            <div style={{ marginTop: "-200px" }}>
               <svg
                 width="1920"
                 height="476"
@@ -153,6 +153,7 @@ export default class Product extends Component {
                   stroke-width="2"
                 />
                 <circle class="moving-circle" r="10" fill="white" />
+                <circle class="moving-circle-2" r="10" fill="white" />
               </svg>
             </div>
           </div>

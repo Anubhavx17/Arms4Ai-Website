@@ -336,7 +336,7 @@ export default function Home() {
           />
         </div> */}
         <div
-          style={{ marginRight: "200px" }}
+          style={{}}
           className="absolute top-[28vw] right-0 z-[0] w-[100%] h-[100vw] hidden lg:block"
         >
           <svg
@@ -356,6 +356,7 @@ export default function Home() {
               stroke-width="2"
             />
             <circle class="moving-circle" r="10" fill="white" />
+            <circle class="moving-circle-2" r="10" fill="white" />
           </svg>
         </div>
         <div>
@@ -474,7 +475,7 @@ export default function Home() {
                 satellite images,
                 <br /> we provide a comprehensive solution for sucrose
                 prediction in sugarcane farming. Our <br />
-                technology-driven approach enables farmers to make data- riven
+                technology-driven approach enables farmers to make data-driven
                 decisions, optimize <br />
                 crop management practices, and improve sugarcane yield and
                 quality.
@@ -720,12 +721,16 @@ export default function Home() {
       <div className=" hidden lg:block white-pink">
         <div className="mt-[200px] lg:mt-[20vw] containers">
           <h1 className="text-center text-[30px] lg:text-[2vw] stroke-title">
-            Modernize how you buy carbon credits. Get started with Arms 4 AI
-            today.
+            Space Intelligence Made User-Friendly for Businesses. Get started
+            with Arms 4 AI today
           </h1>
           <div className="flex justify-center">
             <div className="mt-[5vw] py-[1vw] px-[2vw] blue-gradient-button w-[max-content] rounded-[5vw]">
-              <p className="text-[1vw] text-white">Contact us</p>
+              <p className="text-[1vw] text-white">
+                <a class="" href="/contact">
+                  Contact Us
+                </a>
+              </p>
             </div>
           </div>
           <div className="mt-[6vw] flex gap-[10vw]">
@@ -775,16 +780,23 @@ export default function Home() {
                     Connect with us
                   </h2>
                   <div className="flex gap-[2vw]">
-                    <img
-                      src={group9}
-                      alt=""
-                      className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
-                    />
-                    <img
-                      src={group10}
-                      alt=""
-                      className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
-                    />
+                    <a class="" href="https://twitter.com/Arms4AI1">
+                      <img
+                        src={group9}
+                        alt=""
+                        className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
+                      />
+                    </a>
+                    <a
+                      class=""
+                      href="https://www.linkedin.com/company/arms4ai/"
+                    >
+                      <img
+                        src={group10}
+                        alt=""
+                        className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -808,7 +820,9 @@ export default function Home() {
                   />
                   <div className="flex-[1] py-[0.5vw] px-[1.5vw] blue-gradient-button w-[max-content] rounded-[3vw]">
                     <p className="text-[0.8vw] text-white text-center">
-                      Contact us
+                      <a class="" href="/contact">
+                        Contact Us
+                      </a>
                     </p>
                   </div>
                 </div>

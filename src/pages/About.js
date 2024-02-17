@@ -213,6 +213,7 @@ export default class About extends Component {
                 stroke-width="2"
               />
               <circle class="moving-circle" r="10" fill="white" />
+              <circle class="moving-circle-2" r="10" fill="white" />
             </svg>
           </div>
         </div>
@@ -278,8 +279,8 @@ export default class About extends Component {
                 </h3>
                 <p className="text-[1vw] pt-[2vw]">
                   Our vision is to enable the entire Global Geospatial Ecosystem
-                  with cutting edge Technology & Solutions Designed and Made in
-                  India Product. with appropriate technology and solution that
+                  with cutting edge Technology & Solutions that are designed and
+                  Made In India with appropriate technology and solutions that
                   solves the problem of manual scavenging and indefinite time
                   consumption forever that open doors to analysis driven
                   approach further.
@@ -543,7 +544,12 @@ export default class About extends Component {
             </h1>
             <div className="flex justify-center">
               <div className="mt-[5vw] py-[1vw] px-[2vw] blue-gradient-button w-[max-content] rounded-[5vw]">
-                <p className="text-[1vw] text-white">Contact us</p>
+                <p className="text-[1vw] text-white">
+                  {" "}
+                  <a class="" href="/contact">
+                    Contact Us
+                  </a>
+                </p>
               </div>
             </div>
             <div className="mt-[6vw] flex gap-[10vw]">
@@ -594,16 +600,23 @@ export default class About extends Component {
                       Connect with us
                     </h2>
                     <div className="flex gap-[2vw]">
-                      <img
-                        src={group9}
-                        alt=""
-                        className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
-                      />
-                      <img
-                        src={group10}
-                        alt=""
-                        className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
-                      />
+                      <a class="" href="https://twitter.com/Arms4AI1">
+                        <img
+                          src={group9}
+                          alt=""
+                          className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
+                        />
+                      </a>
+                      <a
+                        class=""
+                        href="https://www.linkedin.com/company/arms4ai/"
+                      >
+                        <img
+                          src={group10}
+                          alt=""
+                          className="h-[1.3vw] w-[1.3vw] mt-[1vw]"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
