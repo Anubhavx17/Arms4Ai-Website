@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Arms4Ai-Website/static/css/main.b46c34e9.css",
-    "main.js": "/Arms4Ai-Website/static/js/main.1640a9a4.js",
+    "main.css": "/Arms4Ai-Website/static/css/main.e1378279.css",
+    "main.js": "/Arms4Ai-Website/static/js/main.a0416931.js",
     "reactPlayerYouTube.js": "/Arms4Ai-Website/static/js/reactPlayerYouTube.c1775f10.chunk.js",
     "reactPlayerSoundCloud.js": "/Arms4Ai-Website/static/js/reactPlayerSoundCloud.e1a4eabc.chunk.js",
     "reactPlayerVimeo.js": "/Arms4Ai-Website/static/js/reactPlayerVimeo.1f1a5355.chunk.js",
@@ -97,8 +97,8 @@
     "static/media/twitter (1) 1.svg": "/Arms4Ai-Website/static/media/twitter (1) 1.cff200d132407112b901075f9e82cc2d.svg",
     "static/media/Path_2520.svg": "/Arms4Ai-Website/static/media/Path_2520.e456467483d1a0ed085c17f809772f4f.svg",
     "index.html": "/Arms4Ai-Website/index.html",
-    "main.b46c34e9.css.map": "/Arms4Ai-Website/static/css/main.b46c34e9.css.map",
-    "main.1640a9a4.js.map": "/Arms4Ai-Website/static/js/main.1640a9a4.js.map",
+    "main.e1378279.css.map": "/Arms4Ai-Website/static/css/main.e1378279.css.map",
+    "main.a0416931.js.map": "/Arms4Ai-Website/static/js/main.a0416931.js.map",
     "reactPlayerYouTube.c1775f10.chunk.js.map": "/Arms4Ai-Website/static/js/reactPlayerYouTube.c1775f10.chunk.js.map",
     "reactPlayerSoundCloud.e1a4eabc.chunk.js.map": "/Arms4Ai-Website/static/js/reactPlayerSoundCloud.e1a4eabc.chunk.js.map",
     "reactPlayerVimeo.1f1a5355.chunk.js.map": "/Arms4Ai-Website/static/js/reactPlayerVimeo.1f1a5355.chunk.js.map",
@@ -115,7 +115,7 @@
     "787.7efd31bd.chunk.js.map": "/Arms4Ai-Website/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b46c34e9.css",
-    "static/js/main.1640a9a4.js"
+    "static/css/main.e1378279.css",
+    "static/js/main.a0416931.js"
   ]
 }
