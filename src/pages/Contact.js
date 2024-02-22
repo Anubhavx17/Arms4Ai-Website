@@ -1,28 +1,34 @@
 import React, { useRef } from "react";
-import {
-  FaAt,
-  FaBuilding,
-  FaLinkedin,
-  FaTwitter,
-  FaFacebook,
-} from "react-icons/fa";
+import { FaAt, FaBuilding, FaLinkedin, FaTwitter } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import PageLoader from "../components/PageLoader";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm(
-      "service_1wa0lvg",
-      "template_vdkb11f",
-      form.current,
-      "6zNrvNXC1TViiaHXe"
-    );
-    e.target.reset();
+    notify();
+    emailjs
+      .sendForm(
+        "service_bdvt5xv",
+        "template_8v552kr",
+        form.current,
+        "QwA2etMIIamHKoyeQ"
+      )
+      .then((response) => {
+        console.log("Email successfully sent!", response);
+        e.target.reset(); // Reset the form after successful submission
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Handle the error as needed (e.g., display an error message to the user)
+      });
   };
+
+  const notify = () => toast("Message Sent!");
 
   return (
     <>
@@ -52,7 +58,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact-right">
-            <form onSubmit={sendEmail} ref={form}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="contact-form-row">
                 <label>First name</label>
                 <label>Last name</label>
@@ -109,8 +115,14 @@ export default function Contact() {
                   required
                 />
               </div>
-              <input type="submit" value="Submit" className="contact-btn" />
+              <input
+                type="submit"
+                value="Submit"
+                className="contact-btn"
+                style={{ cursor: "pointer" }}
+              />
             </form>
+            <ToastContainer autoClose={2000} />
           </div>
         </div>
       </div>
